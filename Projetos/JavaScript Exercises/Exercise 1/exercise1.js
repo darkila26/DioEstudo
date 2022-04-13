@@ -16,7 +16,7 @@ if (day == 1)
                     day = 'Friday';
                     else if (day == 6)
                          day = 'Saturday';
-                        else if (day == 6)
+                        else if (day == 0)
                              day = 'Sunday';
 
 
