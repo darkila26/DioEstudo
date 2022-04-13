@@ -17,5 +17,16 @@ let hour = hourTime.getHours();
 let minutes = hourTime.getMinutes();
 let seconds = hourTime.getSeconds()
 
+// To Display AM and PM
+let amPm = null;
+if (hour >= 12) amPm = ' PM';
+if (hour <= 12) amPm = ' AM'; 
 
-console.log('Today is :' + ' ' + day + '\n' + 'Current Time is :' + ' ' + hour + ' ' + minutes + ' ' + seconds);
+// To display correct time and number in AM PM format
+hour = hour - 12;
+
+// --------------! pending issue: when 0 it displays - 12, need to fix that.
+
+let fullHour = hour + amPm; 
+
+console.log('Today is :' + ' ' + day + '\n' + 'Current Time is :' + ' ' + fullHour + ' ' + minutes + ' ' + seconds);
