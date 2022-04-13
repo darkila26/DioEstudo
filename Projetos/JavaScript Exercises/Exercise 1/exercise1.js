@@ -25,17 +25,19 @@ let hour = hourTime.getHours();
 let minutes = hourTime.getMinutes();
 let seconds = hourTime.getSeconds()
 
+// It was showing 22 PM, needs to change to 10 PM, below is to display correct time and number in AM PM format
+let newHour = null;
+if (hour == 0) newHour = '12';
+if (hour != 0) newHour = (hour - 12);
+
 // To Display AM and PM
 let amPm = null;
-if (hour == 0) amPm = ' AM';
-if (hour == 12) amPm = ' PM'; 
+if (hour < 12 || hour == 0) amPm = ' AM';
+if (hour >= 12) amPm = ' PM'; 
 
-// It was showing 22 PM, needs to change to 10 PM, below is to display correct time and number in AM PM format
-if (hour == 0) hour = 12;
-if (hour != 0) hour - 12;
 
 // fullhour variable
 
-let fullHour = hour + amPm; 
+let fullHour = newHour + amPm; 
 
-console.log('Today is :' + ' ' + day + '\n' + 'Current Time is :' + ' ' + fullHour + ' ' + minutes + ' ' + seconds);
+console.log('Today is :' + ' ' + day + '\n' + 'Current Time is :' + ' ' + fullHour + ' : ' + minutes + ' : ' + seconds);
