@@ -4,6 +4,38 @@
 
 const dayOfTheWeek = new Date();
 let day = dayOfTheWeek.getDay();
+// Trying switch for the first time
+
+switch (day) {
+    case 1:
+        day = 'Monday';
+        break;
+    case 2:
+        day = 'Tuesday';
+        break;
+    case 3:
+        day = 'Wednesday';
+        break;
+    case 4:
+        day = 'Thursday';
+        break;
+    case 5:
+        day = 'Friday';
+        break;
+    case 6:
+        day = 'Saturday';
+        break;
+    case 7:
+        day = 'Sunday';
+        break;
+    default:
+        day = "error";
+        break;
+}
+
+
+
+/* 
 if (day == 1) 
     day = 'Monday';
     else if (day == 2) 
@@ -19,7 +51,7 @@ if (day == 1)
                         else if (day == 0)
                              day = 'Sunday';
 
-
+*/
 const hourTime = new Date();
 let hour = hourTime.getHours();
 let minutes = hourTime.getMinutes();
